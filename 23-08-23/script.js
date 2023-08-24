@@ -14,6 +14,6 @@ Reprovado -> média < 7
 
 */
 
-for(var notas = 1; notas >= 3; notas++){
+for (var notas = 1; notas >= 3; notas++) {
     prompt("Qual a nota do aluno 1 ? ")
 }
