@@ -19,12 +19,14 @@ Reprovado -> média < 7
 
 // Variavel para controlar qtde de alunos
 
-var notaAluno = parseFloat(0.0); parseFloat(acumNotas = 0.0);
-var nomeAluno;
+var notaAluno, acumNotas, nomeAluno;
+var qtdNotas;
 
 
 // Laço para controlar leitura de alunos
 // enquanto os alunos forem menor ou igual a 2, fazer estas instruções
+
+
 
 for (var qtdAlunos = 1; qtdAlunos <= 2; qtdAlunos++) {
     nomeAluno = prompt('Informe o nome do ' + qtdAlunos + " º aluno ");
@@ -33,7 +35,7 @@ for (var qtdAlunos = 1; qtdAlunos <= 2; qtdAlunos++) {
     // enquanto tiver menos ou igual a 2 notas, fazer estas instruções
     for (var qtdNotas = 1; qtdNotas <= 2; qtdNotas++) {
         notaAluno = parseFloat(prompt('Informe a nota ' + qtdNotas + ' do aluno ' + nomeAluno))
-        qtdNotas++;
+       
         acumNotas = acumNotas + notaAluno;
 
 
@@ -42,8 +44,17 @@ for (var qtdAlunos = 1; qtdAlunos <= 2; qtdAlunos++) {
     // Exibir Média com alerta
     window.alert('A média do ' + qtdAlunos + 'º aluno é ' + acumNotas / 2)
 
+    mediaAluno = acumNotas / 2;
+
+    if (mediaAluno >= 7) {
+        window.alert('Aluno aprovado com média ' + mediaAluno + ' .')
+    }
+    else {
+        window.alert('Aluno reprovou com média ' + mediaAluno + ' .')
+    }
+
     // Passa para o proximo aluno
-    qtdAlunos++;
+   
 }
 
 
@@ -51,12 +62,12 @@ for (var qtdAlunos = 1; qtdAlunos <= 2; qtdAlunos++) {
 
 // ----------- ESTRUTURA WHILE ----------
 
-/*
 
+/*
 
 // Variavel para controlar qtde de alunos
 
-var qtdAlunos = 1, qtdNotas = 1; notaAluno = parseFloat(0.0); parseFloat(acumNotas = 0.0);
+var qtdAlunos = 1, qtdNotas = 1, notaAluno = parseFloat(0.0), acumNotas = parseFloat(0.0); 
 var nomeAluno;
 
 
@@ -78,6 +89,15 @@ while ( qtdAlunos <= 2) {
 
     // Exibir Média com alerta
     window.alert('A média do ' + qtdAlunos + 'º aluno é ' + acumNotas / 2)
+
+    mediaAluno = acumNotas / 2;
+
+    if (mediaAluno >= 7) {
+        window.alert('Aluno aprovado com média ' + mediaAluno + ' .')
+    }
+    else {
+        window.alert('Aluno reprovou com média ' + mediaAluno + ' .')
+    }
 
     // Passa para o proximo aluno
     qtdAlunos++;
