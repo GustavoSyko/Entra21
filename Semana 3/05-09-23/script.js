@@ -16,9 +16,9 @@ Negras
 Malhado
 Pretas */
 
-var gado = 0, vlrGado = parseFloat(5000), branco = 0, gaMalhado = 0, marrom = 0
+var vlrGado = parseFloat(5000), gaBranco = 0, gaMalhado = 0, gaMarrom = 0
 
-var ovelha = 0, vlrOvelha = parseFloat(3000), branca = 0, ovMalhada = 0, pretas = 0
+var vlrOvelha = parseFloat(3000), ovBranca = 0, ovMalhada = 0, ovPretas = 0
 
 var programa = true
 
@@ -26,10 +26,12 @@ var pergunta
 
 var cores
 
-pergunta = prompt('Vamos contar qual animal?\nGado\nOvelha')
-pergunta = pergunta.toLowerCase()
+
 
 while (programa == true) {
+
+    pergunta = prompt('Vamos contar qual animal?\nGado\nOvelha')
+    pergunta = pergunta.toLowerCase()
 
     switch (pergunta) {
         case 'gado':
@@ -37,16 +39,19 @@ while (programa == true) {
             cores = prompt('Qual a cor do gado?\nBranco\nMalhado\nMarrom')
             cores = cores.toLowerCase()
             if (cores == 'branco') {
-                branco = parseInt(prompt('Quantos Gados Brancos o fazendeiro possue?'))
-                gado += branco
+                gaBranco += parseInt(prompt('Quantos Gados Brancos o fazendeiro possue?'))
+                gado += gaBranco
+
             }
             if (cores == 'malhado') {
-                gaMalhado = parseInt(prompt('Quantos Gados Malhados o fazendeiro possue?'))
+                gaMalhado += parseInt(prompt('Quantos Gados Malhados o fazendeiro possue?'))
                 gado += gaMalhado
+
             }
             if (cores == 'marrom') {
-                marrom = parseInt(prompt('Quantos Gados Marrons o fazendeiro possue?'))
-                gado += marrom
+                gaMarrom += parseInt(prompt('Quantos Gados Marrons o fazendeiro possue?'))
+                gado += gaMarrom
+
             }
 
             break;
@@ -56,16 +61,19 @@ while (programa == true) {
             cores = prompt('Qual a cor da Ovelha?\nBranca\nMalhada\nPreta')
             cores = cores.toLowerCase()
             if (cores == 'branca') {
-                branco = parseInt(prompt('Quantas Ovelhas Brancas o fazendeiro possue?'))
-                ovelha += branca
+                ovBranca += parseInt(prompt('Quantas Ovelhas Brancas o fazendeiro possue?'))
+                ovelha += ovBranca
+
             }
             if (cores == 'malhada') {
-                gaMalhado = parseInt(prompt('Quantas Ovelhas Malhadas o fazendeiro possue?'))
+                ovMalhada += parseInt(prompt('Quantas Ovelhas Malhadas o fazendeiro possue?'))
                 ovelha += ovMalhada
+
             }
             if (cores == 'preta') {
-                pretas = parseInt(prompt('Quantas Ovelhas Pretas o fazendeiro possue?'))
-                ovelha += pretas
+                ovPretas += parseInt(prompt('Quantas Ovelhas Pretas o fazendeiro possue?'))
+                ovelha += ovPretas
+
             }
 
             break;
@@ -78,4 +86,16 @@ while (programa == true) {
     programa = confirm('O fazendeiro possoe mais animais?\nSelecine OK para continuar.\nCancelar para sair.')
 }
 
-alert()
+var gado = gaBranco + gaMalhado + gaMarrom
+var ovelha = ovBranca + ovMalhada + ovPretas
+
+// pegar o total de ovelhas e de gados e multiplicar pelo valor de cada uma
+
+var vlrTotalGado = gado * vlrGado
+var vlrTotalOvelha = ovelha * vlrOvelha
+
+// transformando em moeda brasileira para diminuir o codigo, assim não precisamos colocar .toFixed(2) etc e nem 'R$'...
+var vlrTotalGado = vlrTotalGado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+var vlrTotalOvelha = vlrTotalOvelha.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+alert(vlrTotalGado)
