@@ -141,3 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('vlrTotalPretas').innerHTML = vlrTotalPretas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
 })
+
+
+
+//          USAR DEFER PRA VER

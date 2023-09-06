@@ -29,10 +29,7 @@ table{
     background-color: rgba(0, 0, 0, 0.127);
     width: 500px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.41);
-    transition: width 2s, height 2s, transform 2s;
+    
+    
 }
 
-#container::before{
-    width: 100px;
-    transform: rotate(180deg);
-}
