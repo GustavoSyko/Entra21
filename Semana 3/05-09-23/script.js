@@ -43,20 +43,20 @@ while (programa == true) {
     switch (pergunta) {
         case 'gado':
 
-            cores = prompt('Qual a cor do gado?\nBranco\nMalhado\nMarrom')
+            cores = prompt('                              QUAL A COR DO GADO ?\n\n-     Branco\n\n-     Malhado\n\n-     Marrom\n')
             cores = cores.toLowerCase()
             if (cores == 'branco') {
-                gaBranco += parseInt(prompt('Quantos Gados Brancos o fazendeiro possue?'))
+                gaBranco += parseInt(prompt('\n     Quantos Gados Brancos o fazendeiro possue?\n'))
                 gado += gaBranco
 
             }
             if (cores == 'malhado') {
-                gaMalhado += parseInt(prompt('Quantos Gados Malhados o fazendeiro possue?'))
+                gaMalhado += parseInt(prompt('\n        Quantos Gados Malhados o fazendeiro possue?\n'))
                 gado += gaMalhado
 
             }
             if (cores == 'marrom') {
-                gaMarrom += parseInt(prompt('Quantos Gados Marrons o fazendeiro possue?'))
+                gaMarrom += parseInt(prompt('\n     Quantos Gados Marrons o fazendeiro possue?\n'))
                 gado += gaMarrom
 
             }
@@ -65,20 +65,20 @@ while (programa == true) {
 
         case 'ovelha':
 
-            cores = prompt('Qual a cor da Ovelha?\nBranca\nMalhada\nPreta')
+            cores = prompt('                              QUAL A COR DA OVELHA ?\n\n-     Branca\n\n-     Malhada\n\n-     Preta\n')
             cores = cores.toLowerCase()
             if (cores == 'branca') {
-                ovBranca += parseInt(prompt('Quantas Ovelhas Brancas o fazendeiro possue?'))
+                ovBranca += parseInt(prompt('\n       Quantas Ovelhas Brancas o fazendeiro possue?\n'))
                 ovelha += ovBranca
 
             }
             if (cores == 'malhada') {
-                ovMalhada += parseInt(prompt('Quantas Ovelhas Malhadas o fazendeiro possue?'))
+                ovMalhada += parseInt(prompt('\n      Quantas Ovelhas Malhadas o fazendeiro possue?\n'))
                 ovelha += ovMalhada
 
             }
             if (cores == 'preta') {
-                ovPretas += parseInt(prompt('Quantas Ovelhas Pretas o fazendeiro possue?'))
+                ovPretas += parseInt(prompt('\n       Quantas Ovelhas Pretas o fazendeiro possue?\n'))
                 ovelha += ovPretas
 
             }
@@ -91,7 +91,7 @@ while (programa == true) {
             break;
     }
 
-    programa = confirm('O fazendeiro possue mais animais?\nSelecine OK para continuar.\nCancelar para sair.')
+    programa = confirm('\nO fazendeiro possue mais animais?\n\nSelecine OK para continuar.\n\nCancelar para sair.\n')
 }
 // Somando e multiplicando todos valores de acordo 
 var gado = gaBranco + gaMalhado + gaMarrom
