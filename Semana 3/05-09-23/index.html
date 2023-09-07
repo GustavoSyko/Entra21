@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="estilos.css">
     <title>Entra21</title>
 </head>
 
 <body>
     <header>
-
+        <h1>Contagem dos Gados e Ovelhas da fazenda</h1>
     </header>
 
     <main>
-        <div id="container">
+        <div class="container">
 
             <!-- Tabela de gado-->
-            <table style="width:100%">
+            <table>
                 <tr id="tabelaGado">
                     <th>Gado</th>
-                    <th>Quantidade</th>
+                    <th>Qtd.</th>
                     <th>Valor Unit.</th>
                     <th>Valor total</th>
                 </tr>
@@ -46,11 +46,11 @@
             </table><br><br>
 
 
-                        <!-- Tabela de ovelha -->
-            <table style="width:100%">
+            <!-- Tabela de ovelha -->
+            <table>
                 <tr id="tabelaOvelha">
                     <th>Ovelha</th>
-                    <th>Quantidade</th>
+                    <th>Qtd.</th>
                     <th>Valor Unit.</th>
                     <th>Valor total</th>
                 </tr>
@@ -74,10 +74,13 @@
                 </tr>
             </table>
         </div>
+        <div class="botoes">
+            <input type="button" class="limpar" value="Limpar" onclick="limpar()"><br><br>
+            <input type="button" class="refazer" value="Refazer" onclick="recarregar()">
+        </div>
     </main>
 
     <footer>
-
     </footer>
 </body>
 
